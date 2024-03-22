@@ -87,8 +87,10 @@
                     }
                     break;
                 case "EVEN SUM":
-                    
-                    
+                    if 
+                    {
+
+                    }
 
                     break;
                 case "ODD SUM":
