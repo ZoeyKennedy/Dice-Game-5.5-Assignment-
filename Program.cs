@@ -8,6 +8,8 @@
             double bet;
             string type;
             double amountWon;
+            
+
 
             balance = 100;
             
@@ -32,6 +34,7 @@
             Console.WriteLine("Type the name of the type of bet");
             type = Console.ReadLine();
             type = type.ToUpper();
+
 
             
             switch (type)
@@ -87,14 +90,50 @@
                     }
                     break;
                 case "EVEN SUM":
-                    if 
-                    {
+                    die1 = new Die();
+                    die2 = new Die();
 
+                    Console.WriteLine(die1);
+                    die1.DrawRoll();
+                    Console.WriteLine(die2);
+                    die2.DrawRoll();
+
+                    if ((die1.Roll + die2.Roll) % 2 == 1)
+                    {
+                        balance = balance - bet;
+                        Console.WriteLine("Sorry! You lost your bet. ");
+                        Console.WriteLine("Your new balance is " + balance);
+                    }
+                    else
+                    {
+                        balance = balance + bet;
+                        Console.WriteLine("You won " + (bet) + "!");
+                        Console.WriteLine("Your new balance is " + balance);
                     }
 
                     break;
                 case "ODD SUM":
-                    Console.WriteLine();
+                    die1 = new Die();
+                    die2 = new Die();
+
+                    Console.WriteLine(die1);
+                    die1.DrawRoll();
+                    Console.WriteLine(die2);
+                    die2.DrawRoll();
+
+                    if ((die1.Roll + die2.Roll) % 2 == 1)
+                    {
+                        balance = balance + bet;
+                        Console.WriteLine("You won " + (bet) + "!");
+                        Console.WriteLine("Your new balance is " + balance);
+                    }
+                    else
+                    {
+                        balance = balance - bet;
+                        Console.WriteLine("Sorry! You lost your bet. ");
+                        Console.WriteLine("Your new balance is " + balance);
+
+                    }
                     break;
                
             }
